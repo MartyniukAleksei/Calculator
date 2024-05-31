@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header-heading">calc</h1>
+        <div class="header-theme-choosing">
+          <p class="theme-choosing-heading">THEME</p>
+          <div class="theme-choosing-container">
+            <div class="theme-choosing-description">
+              <p class="theme-choosing-number">1</p>
+              <p class="theme-choosing-number">2</p>
+              <p class="theme-choosing-number">3</p>
+            </div>
+            <input
+              type="range"
+              class="theme-choosing-input"
+              min="1"
+              max="3"
+              step="1"
+              value="1"
+            />
+          </div>
+        </div>
+      </header>
+
+      <section class="output">
+        <h1 class="output-text">0</h1>
+      </section>
+
+      <section class="buttons-container">
+        <div class="buttons">
+          <button class="btn">7</button>
+          <button class="btn">8</button>
+          <button class="btn">9</button>
+          <button class="btn del-btn">DEL</button>
+          <button class="btn">4</button>
+          <button class="btn">5</button>
+          <button class="btn">6</button>
+          <button class="btn">+</button>
+          <button class="btn">1</button>
+          <button class="btn">2</button>
+          <button class="btn">3</button>
+          <button class="btn">-</button>
+          <button class="btn">.</button>
+          <button class="btn">0</button>
+          <button class="btn">/</button>
+          <button class="btn">x</button>
+          <button class="btn reset-btn">RESET</button>
+          <button class="btn equal-btn">=</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

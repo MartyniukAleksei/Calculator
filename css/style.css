@@ -1,0 +1,193 @@
+:root {
+  --colorBack: #3b4664;
+  --colorOutPut: #181f32;
+  --colorBtnCont: #252d44;
+  --colorBtn: #eae3db;
+  --colorBtnText: #3e4856;
+  --colorBtnShadow: #b2a195;
+  --varBtnHov: white;
+  --colorDelBtn: #a2b2e2;
+  --colorDelBtnShadow: #414e72;
+  --colorDelBtnText: white;
+  --colorEqBtn: #f96c5b;
+  --colorEqShadow: #8f2316;
+  --colorEqColor: white;
+  --colorDelBtnHov: #b7c1ff;
+  --coloreqBtnHov: #ff8e5d;
+  --colorText: white;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "League Spartan", "Inter";
+  font-weight: 700;
+  color: var(--colorText);
+  transition: all 0.3s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--colorBack);
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  max-width: 400px;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.header-heading {
+  font-size: 24px;
+}
+
+.theme-choosing-heading {
+  font-size: 12px;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.output {
+  background-color: var(--colorOutPut);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border-radius: 15px;
+}
+
+.output-text {
+  font-size: 48px;
+}
+
+.buttons-container {
+  background-color: var(--colorBtnCont);
+  margin-top: 15px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr) 45px;
+  grid-gap: 20px;
+}
+
+.btn {
+  background-color: var(--colorBtn);
+  color: var(--colorBtnText);
+  font-size: 32px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0px 5px var(--colorBtnShadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--varBtnHov);
+}
+
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.del-btn,
+.reset-btn {
+  background-color: var(--colorDelBtn);
+  box-shadow: 0px 5px var(--colorDelBtnShadow);
+  color: var(--colorDelBtnText);
+  font-size: 20px;
+}
+
+.equal-btn {
+  background-color: var(--colorEqBtn);
+  box-shadow: 0px 5px var(--colorEqShadow);
+  color: var(--colorEqColor);
+  font-size: 24px;
+}
+
+.del-btn:hover,
+.reset-btn:hover {
+  background-color: var(--colorDelBtnHov);
+}
+
+.equal-btn:hover {
+  background-color: var(--coloreqBtnHov);
+}
+
+.reset-btn {
+  grid-column: 1 / 3;
+}
+
+.equal-btn {
+  grid-column: 3 / 5;
+}
+
+.header-theme-choosing {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.theme-choosing-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme-choosing-input {
+  width: 50px;
+  range: 50%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+.theme-choosing-input::-webkit-slider-runnable-track {
+  background: var(--colorOutPut);
+  border-radius: 15px;
+  height: 18px;
+  width: 100%;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.theme-choosing-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 12px; /* Высота бегунка */
+  width: 12px; /* Ширина бегунка */
+  border-radius: 10px;
+  margin-top: 3px;
+  background: var(--colorEqBtn); /* Цвет бегунка */
+}
